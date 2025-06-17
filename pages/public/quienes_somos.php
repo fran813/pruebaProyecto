@@ -4,7 +4,7 @@
  * sus servicios y el equipo profesional.
  * Incluye sección informativa y galería de imágenes.
  */
-include '../../includes/db.php'; 
+include '/includes/db.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,11 +12,11 @@ include '../../includes/db.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiénes Somos | Reservas Fisio</title>
-    <link href="/reservas_proyecto/dist/output.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100">
 
-    <?php include '../../includes/header.php'; ?>
+    <?php include '/includes/header.php'; ?>
 
     <main class="flex-grow">
         <section class="bg-white py-16 px-6 max-w-4xl mx-auto">
@@ -43,13 +43,13 @@ include '../../includes/db.php';
                 <h2 class="text-3xl font-semibold text-purple-700 mb-8 text-center">Conócenos</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="overflow-hidden rounded-lg shadow-lg">
-                        <img src="/reservas_proyecto/img/Foto-1-fisio.jpeg" alt="Fisioterapeuta" class="w-full h-64 object-cover transform transition duration-500 hover:scale-105 hover:brightness-90">
+                        <img src="/img/Foto-1-fisio.jpeg" alt="Fisioterapeuta" class="w-full h-64 object-cover transform transition duration-500 hover:scale-105 hover:brightness-90">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-lg">
-                        <img src="/reservas_proyecto/img/Foto-2-fisio.jpeg" alt="Clínica 1" class="w-full h-64 object-cover transform transition duration-500 hover:scale-105 hover:brightness-90">
+                        <img src="/img/Foto-2-fisio.jpeg" alt="Clínica 1" class="w-full h-64 object-cover transform transition duration-500 hover:scale-105 hover:brightness-90">
                     </div>
                     <div class="overflow-hidden rounded-lg shadow-lg">
-                        <img src="/reservas_proyecto/img/Foto-3-fisio.jpeg" alt="Clínica 2" class="w-full h-64 object-cover transform transition duration-500 hover:scale-105 hover:brightness-90">
+                        <img src="/img/Foto-3-fisio.jpeg" alt="Clínica 2" class="w-full h-64 object-cover transform transition duration-500 hover:scale-105 hover:brightness-90">
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@ include '../../includes/db.php';
 
     </main>
 
-    <?php include '../../includes/footer.php'; ?>
+    <?php include '/includes/footer.php'; ?>
 
 </body>
 </html>
