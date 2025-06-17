@@ -62,7 +62,7 @@ include('../../includes/header.php');
                 ¿Ya tienes una cuenta? <a href="login.php" class="text-purple-600 hover:underline">Inicia sesión aquí</a>
             </p>
             <p class="text-center text-gray-600 text-sm mt-2">
-                <a href="/reservas_proyecto/index.php" class="text-purple-600 hover:underline">Volver al inicio</a>
+                <a href="/index.php" class="text-purple-600 hover:underline">Volver al inicio</a>
             </p>
         </div>
     </main>
