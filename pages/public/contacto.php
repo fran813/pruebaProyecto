@@ -4,7 +4,7 @@
  * Muestra datos de contacto, un formulario para mensajes y un mapa de ubicación.
  * El formulario envía la información a contacto_proceso.php.
  */
-include('/includes/db.php'); 
+include('../../includes/db.php'); 
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +39,7 @@ include('/includes/db.php');
             <!-- Formulario de contacto -->
             <div class="bg-white p-6 rounded-lg shadow-lg">
                 <h3 class="text-xl font-semibold text-gray-800">Envíanos un mensaje</h3>
-                <form action="/includes/contacto_proceso.php" method="POST" class="mt-4 space-y-4">
+                <form action="../../includes/contacto_proceso.php" method="POST" class="mt-4 space-y-4">
                     <div>
                         <label for="nombre" class="block text-gray-700 font-medium">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required class="w-full p-2 border border-gray-300 rounded-lg">
