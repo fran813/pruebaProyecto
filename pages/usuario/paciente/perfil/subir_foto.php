@@ -4,7 +4,7 @@ include('../../../../includes/db.php');
 
 //Verificacion de seguridad, existe sesion 
 if (!isset($_SESSION['user_id']) || $_SESSION['rol'] != 'paciente') {
-    header('Location: /reservas_proyecto/pages/public/login.php');
+    header('Location: /pages/public/login.php');
     exit();
 }
 
