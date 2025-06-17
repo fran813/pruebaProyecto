@@ -5,7 +5,7 @@ include('../../../../includes/logger.php');
 
 // Verifica si existe la sesion y si no reedirige
 if (!isset($_SESSION['user_id']) || $_SESSION['rol'] != 'paciente') {
-    header('Location: /reservas_proyecto/pages/public/login.php');
+    header('Location: /pages/public/login.php');
     exit();
 }
 
