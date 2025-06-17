@@ -8,10 +8,16 @@
  * - Envía un correo a la clínica con el contenido del mensaje.
  * - Redirige con un parámetro GET indicando éxito o error.
  */
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once('/includes/enviar_correo.php'); 
+require_once(__DIR__ . '/../includes/enviar_correo.php');
+ 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
