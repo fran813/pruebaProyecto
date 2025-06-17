@@ -34,7 +34,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                             echo '<h1 class="text-xl md:text-2xl font-bold">Portal del Usuario</h1>';
                     }
                 } else {
-                    echo '<img src="/reservas_proyecto/img/logo.png" alt="Logo de la clinica" class="h-10 w-auto">
+                    echo '<img src="/img/logo.png" alt="Logo de la clinica" class="h-10 w-auto">
                           <h1 class="text-xl md:text-2xl font-bold">Centro de Fisioterapia PM</h1>';
                 }
                 ?>
