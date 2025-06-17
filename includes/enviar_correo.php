@@ -13,7 +13,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 // Carga automática de dependencias instaladas por Composer (PHPMailer, etc.)
-require __DIR__ . '/../vendor/autoload.php'; 
+require __DIR__ . '/vendor/autoload.php'; 
 
 
 function enviarCorreoGeneral($emailDestino, $nombrePaciente, $asunto, $mensajeHtml) {
