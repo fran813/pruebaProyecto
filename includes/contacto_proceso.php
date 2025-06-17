@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Validación básica de campos
     if (empty($nombre) || empty($email) || empty($mensaje)) {
-        header('Location: /public/contacto.php?error=1');
+        header('Location:/public/contacto.php?error=1');
         exit;
     }
 
@@ -41,9 +41,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Envío del correo y redirección según resultado
     if (enviarCorreoGeneral($correoDestino, $nombreDestino, $asunto, $contenido)) {
-        header('Location: /pages/public/contacto.php?enviado=1');
+        header('Location:/pages/public/contacto.php?enviado=1');
     } else {
-        header('Location: /pages/public/contacto.php?error=2');
+        header('Location:/pages/public/contacto.php?error=2');
     }
     exit;
 }
