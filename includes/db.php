@@ -8,10 +8,10 @@
  * - Si ocurre un error, muestra un mensaje y detiene la ejecución.
  */
 
-$host = 'localhost'; 
-$dbname = 'bdproyectofisio'; 
-$username = 'root'; 
-$password = ''; 
+$host = 'benduopgscpyzsyfpi5k-mysql.services.clever-cloud.com'; 
+$dbname = 'benduopgscpyzsyfpi5k'; 
+$username = 'uqsbgb2n4b8jedqm'; 
+$password = 'vQgZQvb30MWIKIMgHZzF'; 
 
 try {
     // Establecer la conexión PDO con la base de datos
