@@ -73,7 +73,7 @@ if (empty($token)) {
 <head>
     <meta charset="UTF-8">
     <title>Restablecer Contraseña</title>
-    <link href="/reservas_proyecto/dist/output.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100">
     <main class="flex-grow flex items-center justify-center p-8">
@@ -103,7 +103,7 @@ if (empty($token)) {
                 </form>
             <?php else: ?>
                 <div class="text-center mt-6">
-                    <a href="/reservas_proyecto/pages/public/login.php" class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-800 transition">
+                    <a href="/pages/public/login.php" class="inline-block bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-800 transition">
                         Volver al inicio de sesión
                     </a>
                 </div>
