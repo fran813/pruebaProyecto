@@ -3,8 +3,8 @@
  * Página de inicio de sesión para los usuarios.
  * Incluye formulario de login, enlaces de recuperación/registro y muestra errores si los hay.
  */
-include('/includes/db.php'); 
-include('/includes/header.php');
+include('../../includes/db.php'); 
+include('../../includes/header.php');
 ?>
 
 <!DOCTYPE html>
