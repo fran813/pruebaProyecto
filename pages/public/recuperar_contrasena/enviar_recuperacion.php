@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
 
         // Construye el enlace para restablecer la contraseña con el token como parámetro
-        $enlace = "http://localhost/reservas_proyecto/pages/public/recuperar_contrasena/nueva_contrasena.php?token=$token";
+        $enlace = "https://reservasproyectofran-dpc8b0ezgqfgggds.spaincentral-01.azurewebsites.net/pages/public/recuperar_contrasena/nueva_contrasena.php?token=$token";
 
         // Asunto y cuerpo del correo en HTML
         $asunto = "Recuperación de contraseña";
