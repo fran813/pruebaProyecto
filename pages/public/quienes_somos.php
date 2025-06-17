@@ -16,7 +16,7 @@ include '/includes/db.php';
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100">
 
-    <?php include '/includes/header.php'; ?>
+    <?php include '../../includes/header.php'; ?>
 
     <main class="flex-grow">
         <section class="bg-white py-16 px-6 max-w-4xl mx-auto">
@@ -57,7 +57,7 @@ include '/includes/db.php';
 
     </main>
 
-    <?php include '/includes/footer.php'; ?>
+    <?php include '../../includes/footer.php'; ?>
 
 </body>
 </html>
