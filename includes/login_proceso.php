@@ -6,8 +6,8 @@
  * También registra un log de inicio de sesión exitoso.
  */
 session_start();
-include('/includes/db.php');
-include('/includes/logger.php'); 
+include('db.php');
+include('logger.php'); 
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
