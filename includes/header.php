@@ -56,30 +56,30 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                     if (isset($_SESSION['rol'])) {
                         switch ($_SESSION['rol']) {
                             case 'admin':
-                                echo '<li><a href="/reservas_proyecto/pages/admin/admin_dashboard.php" class="hover:text-gray-200">Inicio</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/admin/perfil_admin.php" class="hover:text-gray-200">Perfil</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/admin/reportes/reportes.php" class="hover:text-gray-200">Reportes</a></li>';
+                                echo '<li><a href="/pages/admin/admin_dashboard.php" class="hover:text-gray-200">Inicio</a></li>';
+                                echo '<li><a href="/pages/admin/perfil_admin.php" class="hover:text-gray-200">Perfil</a></li>';
+                                echo '<li><a href="/pages/admin/reportes/reportes.php" class="hover:text-gray-200">Reportes</a></li>';
                                 break;
                             case 'fisioterapeuta':
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/fisio/fisio_dashboard.php" class="hover:text-gray-200">Inicio</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/fisio/lista_citas/citas_asignadas.php" class="hover:text-gray-200">Agenda</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/fisio/historial_pacientes/historial_pacientes.php" class="hover:text-gray-200">Historiales</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/fisio/contacto/contactar.php" class="hover:text-gray-200">Contactar</a></li>';
+                                echo '<li><a href="/pages/usuario/fisio/fisio_dashboard.php" class="hover:text-gray-200">Inicio</a></li>';
+                                echo '<li><a href="/pages/usuario/fisio/lista_citas/citas_asignadas.php" class="hover:text-gray-200">Agenda</a></li>';
+                                echo '<li><a href="/pages/usuario/fisio/historial_pacientes/historial_pacientes.php" class="hover:text-gray-200">Historiales</a></li>';
+                                echo '<li><a href="/pages/usuario/fisio/contacto/contactar.php" class="hover:text-gray-200">Contactar</a></li>';
                                 break;
                             case 'paciente':
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/paciente_dashboard.php" class="hover:text-gray-200">Inicio</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/perfil/perfil_paciente.php" class="hover:text-gray-200">Perfil</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/citas/crear_cita.php" class="hover:text-gray-200">Citas</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/historial/historial.php" class="hover:text-gray-200">Historial</a></li>';
-                                echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/contacto/contacto_fisio.php" class="hover:text-gray-200">Contacto</a></li>';
+                                echo '<li><a href="/pages/usuario/paciente/paciente_dashboard.php" class="hover:text-gray-200">Inicio</a></li>';
+                                echo '<li><a href="/pages/usuario/paciente/perfil/perfil_paciente.php" class="hover:text-gray-200">Perfil</a></li>';
+                                echo '<li><a href="/pages/usuario/paciente/citas/crear_cita.php" class="hover:text-gray-200">Citas</a></li>';
+                                echo '<li><a href="/pages/usuario/paciente/historial/historial.php" class="hover:text-gray-200">Historial</a></li>';
+                                echo '<li><a href="/pages/usuario/paciente/contacto/contacto_fisio.php" class="hover:text-gray-200">Contacto</a></li>';
                                 break;
                         }
-                        echo '<li><a href="/reservas_proyecto/pages/public/logout.php" class="hover:text-gray-200">Cerrar sesión</a></li>';
+                        echo '<li><a href="/pages/public/logout.php" class="hover:text-gray-200">Cerrar sesión</a></li>';
                     } else {
-                        echo '<li><a href="/reservas_proyecto/index.php" class="hover:text-gray-200">Inicio</a></li>';
-                        echo '<li><a href="/reservas_proyecto/pages/public/login.php" class="hover:text-gray-200">Iniciar sesión</a></li>';
-                        echo '<li><a href="/reservas_proyecto/pages/public/quienes_somos.php" class="hover:text-gray-200">Quienes Somos</a></li>';
-                        echo '<li><a href="/reservas_proyecto/pages/public/contacto.php" class="hover:text-gray-200">Contacto</a></li>';
+                        echo '<li><a href="/index.php" class="hover:text-gray-200">Inicio</a></li>';
+                        echo '<li><a href="/pages/public/login.php" class="hover:text-gray-200">Iniciar sesión</a></li>';
+                        echo '<li><a href="/pages/public/quienes_somos.php" class="hover:text-gray-200">Quienes Somos</a></li>';
+                        echo '<li><a href="/pages/public/contacto.php" class="hover:text-gray-200">Contacto</a></li>';
                     }
                     ?>
                 </ul>
@@ -93,31 +93,31 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 if (isset($_SESSION['rol'])) {
                     switch ($_SESSION['rol']) {
                         case 'admin':
-                            echo '<li><a href="/reservas_proyecto/pages/admin/admin_dashboard.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/admin/perfil_admin.php" class="block px-4 py-2 hover:bg-purple-500">Perfil</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/admin/reportes/reportes.php" class="block px-4 py-2 hover:bg-purple-500">Reportes</a></li>';
+                            echo '<li><a href="/pages/admin/admin_dashboard.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>';
+                            echo '<li><a href="/pages/admin/perfil_admin.php" class="block px-4 py-2 hover:bg-purple-500">Perfil</a></li>';
+                            echo '<li><a href="/pages/admin/reportes/reportes.php" class="block px-4 py-2 hover:bg-purple-500">Reportes</a></li>';
                             break;
                         case 'fisioterapeuta':
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/fisio/fisio_dashboard.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/fisio/lista_citas/citas_asignadas.php" class="block px-4 py-2 hover:bg-purple-500">Agenda</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/fisio/historial_pacientes/historial_pacientes.php" class="block px-4 py-2 hover:bg-purple-500">Historiales</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/fisio/contacto/contactar.php" class="block px-4 py-2 hover:bg-purple-500">Contactar</a></li>';
+                            echo '<li><a href="/pages/usuario/fisio/fisio_dashboard.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>';
+                            echo '<li><a href="/pages/usuario/fisio/lista_citas/citas_asignadas.php" class="block px-4 py-2 hover:bg-purple-500">Agenda</a></li>';
+                            echo '<li><a href="/pages/usuario/fisio/historial_pacientes/historial_pacientes.php" class="block px-4 py-2 hover:bg-purple-500">Historiales</a></li>';
+                            echo '<li><a href="/pages/usuario/fisio/contacto/contactar.php" class="block px-4 py-2 hover:bg-purple-500">Contactar</a></li>';
                             break;
                         case 'paciente':
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/paciente_dashboard.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/perfil/perfil_paciente.php" class="block px-4 py-2 hover:bg-purple-500">Perfil</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/citas/crear_cita.php" class="block px-4 py-2 hover:bg-purple-500">Citas</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/historial/historial.php" class="block px-4 py-2 hover:bg-purple-500">Historial</a></li>';
-                            echo '<li><a href="/reservas_proyecto/pages/usuario/paciente/contacto/contacto_fisio.php" class="block px-4 py-2 hover:bg-purple-500">Contacto</a></li>';
+                            echo '<li><a href="/pages/usuario/paciente/paciente_dashboard.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>';
+                            echo '<li><a href="/pages/usuario/paciente/perfil/perfil_paciente.php" class="block px-4 py-2 hover:bg-purple-500">Perfil</a></li>';
+                            echo '<li><a href="/pages/usuario/paciente/citas/crear_cita.php" class="block px-4 py-2 hover:bg-purple-500">Citas</a></li>';
+                            echo '<li><a href="/pages/usuario/paciente/historial/historial.php" class="block px-4 py-2 hover:bg-purple-500">Historial</a></li>';
+                            echo '<li><a href="/pages/usuario/paciente/contacto/contacto_fisio.php" class="block px-4 py-2 hover:bg-purple-500">Contacto</a></li>';
                             break;
                     }
-                    echo '<li><a href="/reservas_proyecto/pages/public/logout.php" class="block px-4 py-2 hover:bg-purple-500">Cerrar sesión</a></li>';
+                    echo '<li><a href="/pages/public/logout.php" class="block px-4 py-2 hover:bg-purple-500">Cerrar sesión</a></li>';
                 } else {
                     // Usuario no logueado: menú público
-                    echo '<li><a href="/reservas_proyecto/index.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>';
-                    echo '<li><a href="/reservas_proyecto/pages/public/login.php" class="block px-4 py-2 hover:bg-purple-500">Iniciar sesión</a></li>';
-                    echo '<li><a href="/reservas_proyecto/pages/public/quienes_somos.php" class="block px-4 py-2 hover:bg-purple-500">Quienes Somos</a></li>';
-                    echo '<li><a href="/reservas_proyecto/pages/public/contacto.php" class="block px-4 py-2 hover:bg-purple-500">Contacto</a></li>';
+                    echo '<li><a href="/index.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>';
+                    echo '<li><a href="/pages/public/login.php" class="block px-4 py-2 hover:bg-purple-500">Iniciar sesión</a></li>';
+                    echo '<li><a href="/pages/public/quienes_somos.php" class="block px-4 py-2 hover:bg-purple-500">Quienes Somos</a></li>';
+                    echo '<li><a href="/pages/public/contacto.php" class="block px-4 py-2 hover:bg-purple-500">Contacto</a></li>';
                 }
                 ?>
             </ul>
