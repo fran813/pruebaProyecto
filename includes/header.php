@@ -8,7 +8,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro de Fisioterapia</title>
-    <link href="/reservas_proyecto/dist/output.css" rel="stylesheet">
+    <link href="/dist/output.css" rel="stylesheet">
     <!-- FullCalendar CSS y JS -->
     <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css' rel='stylesheet' />
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
@@ -22,13 +22,13 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                 if (isset($_SESSION['rol'])) {
                     switch ($_SESSION['rol']) {
                         case 'admin':
-                            echo '<img src="/reservas_proyecto/img/logo.png" alt="Logo de la clinica" class="h-10 w-auto"><h1 class="text-xl md:text-2xl font-bold">Portal del Administrador</h1>';
+                            echo '<img src="/img/logo.png" alt="Logo de la clinica" class="h-10 w-auto"><h1 class="text-xl md:text-2xl font-bold">Portal del Administrador</h1>';
                             break;
                         case 'fisioterapeuta':
-                            echo '<img src="/reservas_proyecto/img/logo.png" alt="Logo de la clinica" class="h-10 w-auto"><h1 class="text-xl md:text-2xl font-bold">Portal del Fisioterapeuta</h1>';
+                            echo '<img src="/img/logo.png" alt="Logo de la clinica" class="h-10 w-auto"><h1 class="text-xl md:text-2xl font-bold">Portal del Fisioterapeuta</h1>';
                             break;
                         case 'paciente':
-                            echo '<img src="/reservas_proyecto/img/logo.png" alt="Logo de la clinica" class="h-10 w-auto"><h1 class="text-xl md:text-2xl font-bold">Portal del Paciente</h1>';
+                            echo '<img src="/img/logo.png" alt="Logo de la clinica" class="h-10 w-auto"><h1 class="text-xl md:text-2xl font-bold">Portal del Paciente</h1>';
                             break;
                         default:
                             echo '<h1 class="text-xl md:text-2xl font-bold">Portal del Usuario</h1>';
