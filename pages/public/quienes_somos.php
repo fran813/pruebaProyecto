@@ -12,7 +12,7 @@ include '../../includes/db.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiénes Somos | Reservas Fisio</title>
-    <link href="/reservas_proyecto/dist/output.css" rel="stylesheet">
+    <link href="/pruebaProyecto/dist/output.css" rel="stylesheet">
 </head>
 <body class="flex flex-col min-h-screen bg-gray-100">
 
