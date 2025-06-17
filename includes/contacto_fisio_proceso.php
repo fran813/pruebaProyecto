@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Validar que se ha enviado un fisioterapeuta y un mensaje
     if (!$fisio_id || empty($mensaje)) {
         $_SESSION['mensaje'] = "Debes rellenar todos los campos antes de enviar el mensaje.";
-        header("Location: ../paciente/contacto_fisio.php");
+        header("Location: /paciente/contacto_fisio.php");
         exit;
     }
 
