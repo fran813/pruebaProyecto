@@ -197,23 +197,34 @@ function cerrarModal() {
     document.getElementById('modalHoras').classList.add('hidden');
 }
 
-// Función que envía la reserva al backend y recarga la página tras respuesta
 function reservarCita(fecha, hora, fisioterapeutaId, tipo) {
-
-    const datos = { fecha, hora, id_fisio: fisioterapeutaId, tipo };
+    const datos = { fecha, hora, id_fisio: fisioterapeutaId, tipo_cita: tipo };
     console.log("Datos enviados:", datos);
     fetch('/pages/usuario/paciente/citas/reservar_cita.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ fecha, hora, id_fisio: fisioterapeutaId, tipo_cita: tipo })
+        body: JSON.stringify(datos),
+        credentials: 'include'  // <- Añade esta línea para que envíe cookies y se mantenga sesión
     })
-    .then(res => res.json())
-    .then(data => {
-        cerrarModal();
-        alert(data.mensaje);
-        location.reload();
+    .then(res => res.text()) // <-- cambia de .json() a .text() para ver la respuesta cruda
+    .then(text => {
+        console.log('Respuesta cruda del servidor:', text);
+        try {
+            const data = JSON.parse(text); // intentamos parsear el JSON
+            cerrarModal();
+            alert(data.mensaje);
+            location.reload();
+        } catch (err) {
+            console.error('Error parseando JSON:', err);
+            alert('Respuesta no es JSON válido, mira la consola.');
+        }
+    })
+    .catch(err => {
+        console.error('Error en fetch:', err);
+        alert('Error en la conexión con el servidor.');
     });
 }
+
 
 </script>
 
