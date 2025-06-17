@@ -6,8 +6,8 @@
  * También registra un log de inicio de sesión exitoso.
  */
 session_start();
-include('../includes/db.php');
-include('../includes/logger.php'); 
+include('/includes/db.php');
+include('/includes/logger.php'); 
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($user) {
         if ($user['activo'] == 0) {
             // Usuario desactivado manda mensaje de usuario inactivo
-            header("Location: ../pages/public/login.php?error=inactivo");
+            header("Location: /pages/public/login.php?error=inactivo");
             exit();
         }
 
@@ -37,27 +37,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Redirigir según rol
             if ($_SESSION['rol'] == 'admin') {
-                header("Location: ../pages/admin/admin_dashboard.php");
+                header("Location: /pages/admin/admin_dashboard.php");
                 exit();
             } elseif ($_SESSION['rol'] == 'paciente') {
-                header("Location: ../pages/usuario/paciente/paciente_dashboard.php");
+                header("Location: /pages/usuario/paciente/paciente_dashboard.php");
                 exit();
             } elseif ($_SESSION['rol'] == 'fisioterapeuta') {
-                header("Location: ../pages/usuario/fisio/fisio_dashboard.php");
+                header("Location: /pages/usuario/fisio/fisio_dashboard.php");
                 exit();
             } else {
                 session_destroy();
-                header("Location: ../pages/public/login.php");
+                header("Location: /pages/public/login.php");
                 exit();
             }
         } else {
             // Contraseña incorrecta
-            header("Location: ../pages/public/login.php?error=credenciales");
+            header("Location: /pages/public/login.php?error=credenciales");
             exit();
         }
     } else {
         // Usuario no encontrado
-        header("Location: ../pages/public/login.php?error=credenciales");
+        header("Location: /pages/public/login.php?error=credenciales");
         exit();
     }
 }
