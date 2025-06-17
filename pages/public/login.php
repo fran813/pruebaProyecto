@@ -3,8 +3,8 @@
  * Página de inicio de sesión para los usuarios.
  * Incluye formulario de login, enlaces de recuperación/registro y muestra errores si los hay.
  */
-include('../../includes/db.php'); 
-include('../../includes/header.php');
+include('/includes/db.php'); 
+include('/includes/header.php');
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ include('../../includes/header.php');
         <div class="bg-white p-8 rounded-xl shadow-lg w-96">
             <h2 class="text-2xl font-semibold text-center text-purple-700 mb-4">Iniciar Sesión</h2>
 
-            <form action="/reservas_proyecto/includes/login_proceso.php" method="POST" class="space-y-4">
+            <form action="/includes/login_proceso.php" method="POST" class="space-y-4">
                 <div>
                     <label for="email" class="block text-gray-700 font-medium">Correo Electrónico</label>
                     <input type="email" id="email" name="email" required
@@ -44,7 +44,7 @@ include('../../includes/header.php');
                 ¿No tienes cuenta? <a href="registro.php" class="text-purple-600 hover:underline">Regístrate aquí</a>
             </p>
             <p class="text-center text-gray-600 text-sm mt-2">
-                <a href="/reservas_proyecto/index.php" class="text-purple-600 hover:underline">Volver al inicio</a>
+                <a href="/index.php" class="text-purple-600 hover:underline">Volver al inicio</a>
             </p>
             <br>
            <?php if (isset($_GET['error']) && $_GET['error'] === 'inactivo'): ?>
