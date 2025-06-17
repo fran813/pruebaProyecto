@@ -203,6 +203,7 @@ function reservarCita(fecha, hora, fisioterapeutaId, tipo) {
     fetch('reservar_cita.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include', // <<---- Esta línea es clave para enviar cookies de sesión
         body: JSON.stringify({ fecha, hora, id_fisio: fisioterapeutaId, tipo_cita: tipo })
     })
     .then(res => res.json())
