@@ -5,7 +5,7 @@ include('../../../../includes/db.php');
 
 //Verificacion de seguridad, existe sesion 
 if (!isset($_SESSION['user_id']) || $_SESSION['rol'] != 'paciente') {
-    header('Location: /reservas_proyecto/pages/public/login.php');
+    header('Location: /pages/public/login.php');
     exit();
 }
 
@@ -32,7 +32,7 @@ $edad = $hoy->diff($fechaNacimiento)->y;
     <div class="bg-white shadow-lg rounded-xl p-6 border border-gray-200 max-w-md mx-auto">
         <div class="text-center mb-6">
             <?php if (!empty($paciente['foto_perfil']) && file_exists(__DIR__ . "/../../../../uploads/{$paciente['foto_perfil']}")): ?>
-                <img src="/reservas_proyecto/uploads/<?= htmlspecialchars($paciente['foto_perfil']) ?>" alt="Foto de perfil" class="w-24 h-24 mx-auto rounded-full object-cover border border-purple-300">
+                <img src="/uploads/<?= htmlspecialchars($paciente['foto_perfil']) ?>" alt="Foto de perfil" class="w-24 h-24 mx-auto rounded-full object-cover border border-purple-300">
             <?php else: ?>
                 <div class="w-24 h-24 mx-auto rounded-full bg-purple-100 flex items-center justify-center text-purple-600 text-4xl font-bold">
                     <?= strtoupper(substr($paciente['nombre'], 0, 1)) ?>
