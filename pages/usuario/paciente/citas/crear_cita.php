@@ -202,7 +202,7 @@ function reservarCita(fecha, hora, fisioterapeutaId, tipo) {
 
     const datos = { fecha, hora, id_fisio: fisioterapeutaId, tipo };
     console.log("Datos enviados:", datos);
-    fetch('reservar_cita.php', {
+    fetch('/pages/usuario/paciente/citas/reservar_cita.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ fecha, hora, id_fisio: fisioterapeutaId, tipo_cita: tipo })
