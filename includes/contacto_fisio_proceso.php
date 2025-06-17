@@ -9,9 +9,9 @@
  * - Muestra un mensaje de confirmación al paciente.
  */
 session_start();
-include('../includes/db.php');
-require_once('../includes/enviar_correo.php');
-require_once('../includes/logger.php');
+include('/includes/db.php');
+require_once('/includes/enviar_correo.php');
+require_once('/includes/logger.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Obtener ID del paciente desde la sesión
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['mensaje'] = "Error al enviar el mensaje.";
     }
     // Redirigir de vuelta a la página de contacto con un mensaje de estado
-    header("Location: /reservas_proyecto/pages/usuario/paciente/contacto/contacto_fisio.php");
+    header("Location: /pages/usuario/paciente/contacto/contacto_fisio.php");
     exit;
 }
 ?>
