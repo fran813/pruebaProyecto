@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class="bg-white p-8 rounded-xl shadow-lg w-96">
         <h2 class="text-2xl font-semibold text-center text-purple-700 mb-4">Crear Nueva Cita</h2>
 
-        <form action="crear_cita.php" method="POST" class="space-y-4">
+        <form action="" method="POST" class="space-y-4">
             <div>
                 <label for="buscador_paciente" class="block text-gray-700 font-medium">Buscar Paciente</label>
                 <input type="text" id="buscador_paciente" placeholder="Nombre, teléfono o email"
