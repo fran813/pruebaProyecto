@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     registrarLog($pdo, $_SESSION['user_id'], "Crear_cita_fisio", $accion);
 
-    header("Location: /reservas_proyecto/pages/usuario/fisio/lista_citas/citas_asignadas.php");
+    header("Location: /pages/usuario/fisio/lista_citas/citas_asignadas.php");
     exit();
 }
 ?>
