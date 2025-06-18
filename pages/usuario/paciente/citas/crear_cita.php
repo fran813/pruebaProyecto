@@ -17,7 +17,7 @@ include('../../../../includes/db.php');
 
 // Verificar que haya usuario logueado y que sea paciente, si no, redirigir a login
 if (!isset($_SESSION['user_id']) || $_SESSION['rol'] != 'paciente') {
-    header('Location: ../login.php');
+    header('Location: /pages/public/login.php');
     exit();
 }
 
@@ -202,7 +202,7 @@ function reservarCita(fecha, hora, fisioterapeutaId, tipo) {
         fecha, 
         hora, 
         id_fisio: fisioterapeutaId, 
-        tipo_cita: tipo // aquí el nombre correcto que espera PHP
+        tipo_cita: tipo 
     };
     console.log("Datos enviados:", datos);
     fetch('reservar_cita.php', {
