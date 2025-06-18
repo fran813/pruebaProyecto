@@ -53,29 +53,18 @@ include('../../../includes/db.php');
 
     <!-- Accesos rápidos como tarjetas -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a href="/reservas_proyecto/pages/usuario/fisio/agenda/crear_cita.php" 
+        <a href="/pages/usuario/fisio/agenda/crear_cita.php" 
            class="flex flex-col items-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
             <div class="text-purple-500 text-5xl mb-3">➕</div>
             <h4 class="text-lg font-semibold text-purple-700">Crear Cita</h4>
         </a>
-<!--
-        <a href="/reservas_proyecto/pages/usuario/fisio/historial_pacientes/historial_pacientes.php" 
-           class="flex flex-col items-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
-            <div class="text-green-500 text-5xl mb-3">📚</div>
-            <h4 class="text-lg font-semibold text-green-700">Historiales de Pacientes</h4>
-        </a>
--->
-        <a href="/reservas_proyecto/pages/usuario/fisio/gestion_usuarios/gestion_usuarios.php" 
+
+        <a href="/pages/usuario/fisio/gestion_usuarios/gestion_usuarios.php" 
            class="flex flex-col items-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
             <div class="text-yellow-500 text-5xl mb-3">⚙️</div>
             <h4 class="text-lg font-semibold text-yellow-600">Gestión Usuarios</h4>
         </a>
-<!--
-        <a href="/reservas_proyecto/pages/usuario/fisio/contacto/contactar.php" 
-           class="flex flex-col items-center p-6 bg-white rounded-xl shadow hover:shadow-lg transition cursor-pointer">
-            <div class="text-red-500 text-5xl mb-3">✉️</div>
-            <h4 class="text-lg font-semibold text-red-600">Contactar</h4>
-        </a>-->
+
     </div>
 
 </main>
