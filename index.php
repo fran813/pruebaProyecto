@@ -65,10 +65,10 @@ if (session_status() === PHP_SESSION_NONE) session_start();
             style="display: none;"
         >
             <ul class="space-y-2 text-lg text-white">
-                <li><a href="index.php" class="hover:text-gray-200 block">Inicio</a></li>
-                <li><a href="pages/public/login.php" class="hover:text-gray-200 block">Iniciar sesión</a></li>
-                <li><a href="pages/public/quienes_somos.php" class="hover:text-gray-200 block">Quienes Somos</a></li>
-                <li><a href="pages/public/contacto.php" class="hover:text-gray-200 block">Contacto</a></li>
+                <li><a href="index.php" class="block px-4 py-2 hover:bg-purple-500">Inicio</a></li>
+                <li><a href="pages/public/login.php" class="block px-4 py-2 hover:bg-purple-500">Iniciar sesión</a></li>
+                <li><a href="pages/public/quienes_somos.php" class="block px-4 py-2 hover:bg-purple-500">Quienes Somos</a></li>
+                <li><a href="pages/public/contacto.php" class="block px-4 py-2 hover:bg-purple-500">Contacto</a></li>
             </ul>
         </nav>
     </header>
