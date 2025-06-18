@@ -25,12 +25,12 @@ if ($busqueda !== '') {
             $paciente['fecha_nacimiento']= date('d-m-Y', strtotime( $paciente['fecha_nacimiento']));
 
             // Ruta de imagen
-            $ruta_imagen = "/reservas_proyecto/uploads/perfil_" . $paciente['id_usuario'] . ".jpg";
+            $ruta_imagen = "/uploads/perfil_" . $paciente['id_usuario'] . ".jpg";
 ?>
             <li class="flex items-center gap-4 p-4 border rounded bg-white shadow">
                 <img src="<?= $ruta_imagen ?>"
                      alt="Foto Perfil"
-                     onerror="this.onerror=null; this.src='/reservas_proyecto/uploads/default.jpg';"
+                     onerror="this.onerror=null; this.src='/uploads/default.jpg';"
                      class="w-16 h-16 rounded-full object-cover border text-center" />
 
                 <div>
