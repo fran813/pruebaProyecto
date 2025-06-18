@@ -198,13 +198,18 @@ function cerrarModal() {
 }
 
 function reservarCita(fecha, hora, fisioterapeutaId, tipo) {
-    const datos = { fecha, hora, id_fisio: fisioterapeutaId, tipo };
+    const datos = { 
+        fecha, 
+        hora, 
+        id_fisio: fisioterapeutaId, 
+        tipo_cita: tipo // aquí el nombre correcto que espera PHP
+    };
     console.log("Datos enviados:", datos);
     fetch('reservar_cita.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include', // <<---- Esta línea es clave para enviar cookies de sesión
-        body: JSON.stringify({ fecha, hora, id_fisio: fisioterapeutaId, tipo_cita: tipo })
+        credentials: 'include', // para enviar cookies de sesión
+        body: JSON.stringify(datos) // usa la variable datos que tiene las claves correctas
     })
     .then(res => res.json())
     .then(data => {
