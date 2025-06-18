@@ -22,7 +22,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         <div class="max-w-7xl mx-auto flex justify-between items-center text-white">
             <div class="flex items-center space-x-3">
                 <img src="img/logo.png" alt="Logo de la clinica" class="h-10 w-auto" />
-                <h1 class="text-2xl font-bold">Centro de Fisioterapia PM</h1>
+                <h1 class="text-xl md:text-2xl font-bold">Centro de Fisioterapia PM</h1>
             </div>
 
             <!-- Botón hamburguesa para móvil -->
