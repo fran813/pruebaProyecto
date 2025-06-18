@@ -17,7 +17,7 @@ include('../../../../includes/db.php');
 
 // Verificar que haya usuario logueado y que sea paciente, si no, redirigir a login
 if (!isset($_SESSION['user_id']) || $_SESSION['rol'] != 'paciente') {
-    header('Location: /pages/public/login.php');
+    header('Location: ../login.php');
     exit();
 }
 
@@ -197,19 +197,15 @@ function cerrarModal() {
     document.getElementById('modalHoras').classList.add('hidden');
 }
 
+// Función que envía la reserva al backend y recarga la página tras respuesta
 function reservarCita(fecha, hora, fisioterapeutaId, tipo) {
-    const datos = { 
-        fecha, 
-        hora, 
-        id_fisio: fisioterapeutaId, 
-        tipo_cita: tipo 
-    };
+
+    const datos = { fecha, hora, id_fisio: fisioterapeutaId, tipo };
     console.log("Datos enviados:", datos);
     fetch('reservar_cita.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include', // para enviar cookies de sesión
-        body: JSON.stringify(datos) // usa la variable datos que tiene las claves correctas
+        body: JSON.stringify({ fecha, hora, id_fisio: fisioterapeutaId, tipo_cita: tipo })
     })
     .then(res => res.json())
     .then(data => {
@@ -218,8 +214,6 @@ function reservarCita(fecha, hora, fisioterapeutaId, tipo) {
         location.reload();
     });
 }
-
-
 
 </script>
 
