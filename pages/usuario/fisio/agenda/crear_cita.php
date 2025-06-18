@@ -6,7 +6,7 @@ include('../../../../includes/logger.php');
 
 
 if (!isset($_SESSION['user_id']) || $_SESSION['rol'] != 'fisioterapeuta') {
-    header('Location: ../login.php');
+    header('Location: /pages/public/login.php');
     exit();
 }
 
